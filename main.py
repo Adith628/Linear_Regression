@@ -11,7 +11,7 @@ y = companies.iloc[:, 4].values
 
 companies.head()
 
-sns.heatmap(companies.corr())
+# sns.heatmap(companies.corr())
 
 # Encoding categorical data
 labelencoder = LabelEncoder()
@@ -23,7 +23,7 @@ x = ct.fit_transform(x)
 x = x[:, 1:]
 
 # Splitting the dataset into the Training set and Test set
-from sklearn.model_selection import reain_test_spilt 
+from sklearn.model_selection import train_test_spilt 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 0)
 
 # Fitting multiple linear regression to the training set
@@ -34,3 +34,11 @@ regressor.fit(x_train, y_train)
 # Predicting the test set results
 y_pred = regressor.predict(x_test)
 
+# calculating the coefficients
+print(regressor.coef_)
+# calculating the intercept
+print(regressor.intercept_)
+
+# calculating the R squared value
+from sklearn.metrics import r2_score
+r2_score(y_test, y_pred)
