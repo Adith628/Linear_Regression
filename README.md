@@ -1,2 +1,2 @@
 # Linear_Regression
-Company Profit prediction Model using Linear Regression
+ProfitPrediction : Company Profit prediction Model using Linear Regression
