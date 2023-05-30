@@ -38,5 +38,4 @@ print(regressor.intercept_)
 # calculating the R squared value
 from sklearn.metrics import r2_score
 score = r2_score(y_test, y_pred)
-
 print(score)
